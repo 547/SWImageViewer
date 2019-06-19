@@ -76,7 +76,7 @@
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		33AD4DE57EC17157587484C16BED3956 /* Bool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bool.swift; path = ImageViewer/Source/Extensions/Bool.swift; sourceTree = "<group>"; };
 		36CFAFCFFC8060C876615D6E71E9F932 /* UIButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = ImageViewer/Source/Extensions/UIButton.swift; sourceTree = "<group>"; };
-		463DD918AF32B01A6E5748E9CA85F5F3 /* ImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ImageViewer.framework; path = ImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		463DD918AF32B01A6E5748E9CA85F5F3 /* ImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		470D9F5E3156FD1814FB6E2BDBB1472F /* GalleryItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GalleryItem.swift; path = ImageViewer/Source/GalleryItem.swift; sourceTree = "<group>"; };
 		4A16542F4C40667A40F70A05B7FA7354 /* CGPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = ImageViewer/Source/Extensions/CGPoint.swift; sourceTree = "<group>"; };
 		5420D05D1D2005A409297F7A2C8F453C /* GalleryDisplacedViewsDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GalleryDisplacedViewsDataSource.swift; path = ImageViewer/Source/GalleryDisplacedViewsDataSource.swift; sourceTree = "<group>"; };
@@ -89,14 +89,14 @@
 		6DBDAA87BDA9BF4166D93A92AFA557F4 /* CAShapeLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CAShapeLayer.swift; path = ImageViewer/Source/Extensions/CAShapeLayer.swift; sourceTree = "<group>"; };
 		6F61B0051C57EB6D11DAFB1711E4C297 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = ImageViewer/Source/Extensions/UIView.swift; sourceTree = "<group>"; };
 		7F3E7E3F40EB11F4EAB7B6C6FC256FE1 /* UtilityFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UtilityFunctions.swift; path = ImageViewer/Source/UtilityFunctions.swift; sourceTree = "<group>"; };
-		856C5DEDF3F91B12F851FA2300E2734F /* Pods_SWImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SWImageViewer.framework; path = "Pods-SWImageViewer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		856C5DEDF3F91B12F851FA2300E2734F /* Pods_SWImageViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWImageViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBD6C562BB4751D3F2E7D19293E1723 /* Pods-SWImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		9658A4C279A98A80611E2FDBFF99E325 /* VideoViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoViewController.swift; path = ImageViewer/Source/VideoViewController.swift; sourceTree = "<group>"; };
 		97C061C9F43FA15193615E0FE0EB52C0 /* Pods-SWImageViewer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWImageViewer-dummy.m"; sourceTree = "<group>"; };
 		9A469CE4E8A2D56F12BEE848E6A291DC /* UISlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISlider.swift; path = ImageViewer/Source/Extensions/UISlider.swift; sourceTree = "<group>"; };
 		9AC7004BDD9BFA984266CA56D3C92738 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = ImageViewer/Source/Extensions/UIColor.swift; sourceTree = "<group>"; };
 		9D5A5FF1B9D8FE3FE11B1D2FB6DEF220 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = ImageViewer/Source/BlurView.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A835EB263A46F3EB0189BCF08F1D48D2 /* Pods-SWImageViewer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SWImageViewer-acknowledgements.plist"; sourceTree = "<group>"; };
 		AC488F48A08AA9EE2D8251009C5602EF /* GallerySwipeToDismissTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GallerySwipeToDismissTransition.swift; path = ImageViewer/Source/GallerySwipeToDismissTransition.swift; sourceTree = "<group>"; };
 		AD57F3E1AFCFEC265BBCFD7DB64B9AA8 /* VideoScrubber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoScrubber.swift; path = ImageViewer/Source/VideoScrubber.swift; sourceTree = "<group>"; };
@@ -206,7 +206,6 @@
 				9658A4C279A98A80611E2FDBFF99E325 /* VideoViewController.swift */,
 				78C57C78B7C54F6AC12C6EFC1278F053 /* Support Files */,
 			);
-			name = ImageViewer;
 			path = ImageViewer;
 			sourceTree = "<group>";
 		};
@@ -465,7 +464,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -539,7 +538,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

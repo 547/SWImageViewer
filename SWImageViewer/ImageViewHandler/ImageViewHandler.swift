@@ -11,9 +11,11 @@ import ImageViewer
 import UIKit
 public class ImageViewerHandler {
     public var dataSource:[ImageViewerDataItem]?
-    public static func persentImageViewer(WithDatasoure data:[UIImage]?, starIndex:Int, viewController:UIViewController) -> () {
+    public var defaultImage:UIImage = UIImage()
+    public static func persentImageViewer(WithDatasoure data:[UIImage]?, defaultImage:UIImage = UIImage(), starIndex:Int, viewController:UIViewController) -> () {
         guard let images = data, images.count > 0 else { return }
         let handler = ImageViewerHandler()
+        handler.defaultImage = defaultImage
         handler.dataSource = ImageViewerDataItem.createDateItems(images: images)
         let galleryViewController =  GalleryViewController.init(startIndex: starIndex, itemsDataSource: handler, itemsDelegate: nil, displacedViewsDataSource: nil, configuration: handler.galleryConfiguration())
         if images.count > 1 {
@@ -29,9 +31,10 @@ public class ImageViewerHandler {
     }
 }
 extension ImageViewerHandler {
-    public static func persentImageViewerWithDataItems(_ dataItems:[ImageViewerDataItem]?, starIndex:Int, viewController:UIViewController) -> () {
+    public static func persentImageViewerWithDataItems(_ dataItems:[ImageViewerDataItem]?, defaultImage:UIImage = UIImage(), starIndex:Int, viewController:UIViewController) -> () {
         guard let dataItems = dataItems, dataItems.count > 0 else { return }
         let handler = ImageViewerHandler()
+        handler.defaultImage = defaultImage
         handler.dataSource = dataItems
         let galleryViewController =  GalleryViewController.init(startIndex: starIndex, itemsDataSource: handler, itemsDelegate: nil, displacedViewsDataSource: nil, configuration: handler.galleryConfiguration())
         if dataItems.count > 1 {
@@ -64,8 +67,9 @@ extension ImageViewerHandler: GalleryItemsDataSource {
     public func itemCount() -> Int {
         return dataSource?.count ?? 0
     }
-    public func provideGalleryItem(_ index: Int, , defaultImage:UIImage = UIImage()) -> GalleryItem {
-        var result = GalleryItem.image(fetchImageBlock: { $0(defaultImage)})
+    public func provideGalleryItem(_ index: Int) -> GalleryItem {
+        let defaultImg = self.defaultImage
+        var result = GalleryItem.image(fetchImageBlock: { $0(defaultImg)})
         guard let dataSource = dataSource, dataSource.count > index else { return result }
         result = dataSource[index].galleryItem
         return result

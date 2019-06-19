@@ -1,0 +1,16 @@
+PODS:
+  - ImageViewer (5.0.0)
+
+DEPENDENCIES:
+  - ImageViewer
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ImageViewer
+
+SPEC CHECKSUMS:
+  ImageViewer: 3def6e39c6979ce3e9d001c78eec0d8b895f2f73
+
+PODFILE CHECKSUM: 2f0113bd9e0c4181aae363c346863e7cfe95e8f5
+
+COCOAPODS: 1.7.1

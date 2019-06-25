@@ -1,5 +1,5 @@
 //
-//  ImageViewerHandler.swift
+//  SWImageViewerHandler.swift
 //  SWImageViewer
 //
 //  Created by Supernova SanDick SSD on 2019/6/19.
@@ -9,14 +9,14 @@
 import Foundation
 import ImageViewer
 import UIKit
-public class ImageViewerHandler {
-    public var dataSource:[ImageViewerDataItem]?
+public class SWImageViewerHandler {
+    public var dataSource:[SWImageViewerDataItem]?
     public var defaultImage:UIImage = UIImage()
     public static func persentImageViewer(WithDatasoure data:[UIImage]?, defaultImage:UIImage = UIImage(), starIndex:Int, viewController:UIViewController) -> () {
         guard let images = data, images.count > 0 else { return }
-        let handler = ImageViewerHandler()
+        let handler = SWImageViewerHandler()
         handler.defaultImage = defaultImage
-        handler.dataSource = ImageViewerDataItem.createDateItems(images: images)
+        handler.dataSource = SWImageViewerDataItem.createDateItems(images: images)
         let galleryViewController =  GalleryViewController.init(startIndex: starIndex, itemsDataSource: handler, itemsDelegate: nil, displacedViewsDataSource: nil, configuration: handler.galleryConfiguration())
         if images.count > 1 {
             let headerView = UILabel.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 24))
@@ -30,10 +30,10 @@ public class ImageViewerHandler {
         viewController.presentImageGallery(galleryViewController, completion: nil)
     }
 }
-extension ImageViewerHandler {
-    public static func persentImageViewerWithDataItems(_ dataItems:[ImageViewerDataItem]?, defaultImage:UIImage = UIImage(), starIndex:Int, viewController:UIViewController) -> () {
+extension SWImageViewerHandler {
+    public static func persentImageViewerWithDataItems(_ dataItems:[SWImageViewerDataItem]?, defaultImage:UIImage = UIImage(), starIndex:Int, viewController:UIViewController) -> () {
         guard let dataItems = dataItems, dataItems.count > 0 else { return }
-        let handler = ImageViewerHandler()
+        let handler = SWImageViewerHandler()
         handler.defaultImage = defaultImage
         handler.dataSource = dataItems
         let galleryViewController =  GalleryViewController.init(startIndex: starIndex, itemsDataSource: handler, itemsDelegate: nil, displacedViewsDataSource: nil, configuration: handler.galleryConfiguration())
@@ -49,7 +49,7 @@ extension ImageViewerHandler {
         viewController.presentImageGallery(galleryViewController, completion: nil)
     }
 }
-extension ImageViewerHandler {
+extension SWImageViewerHandler {
     private func galleryConfiguration() -> GalleryConfiguration {
         return [
             GalleryConfigurationItem.closeButtonMode(.builtIn),
@@ -63,7 +63,7 @@ extension ImageViewerHandler {
         ]
     }
 }
-extension ImageViewerHandler: GalleryItemsDataSource {
+extension SWImageViewerHandler: GalleryItemsDataSource {
     public func itemCount() -> Int {
         return dataSource?.count ?? 0
     }

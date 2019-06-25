@@ -1,5 +1,5 @@
 //
-//  ImageViewerDataItem.swift
+//  SWImageViewerDataItem.swift
 //  SWImageViewer
 //
 //  Created by Supernova SanDick SSD on 2019/6/19.
@@ -9,7 +9,7 @@
 import Foundation
 import ImageViewer
 import UIKit
-public struct ImageViewerDataItem {
+public struct SWImageViewerDataItem {
     public let imageView:UIImageView
     public let galleryItem: GalleryItem
     public init(image:UIImage) {
@@ -22,17 +22,17 @@ public struct ImageViewerDataItem {
         self.imageView = UIImageView.init(image: image)
         self.galleryItem = galleryItem
     }
-    public static func createDateItems(images:[UIImage]) -> [ImageViewerDataItem] {
-        var result = [ImageViewerDataItem]()
+    public static func createDateItems(images:[UIImage]) -> [SWImageViewerDataItem] {
+        var result = [SWImageViewerDataItem]()
         for item in images {
-            result.append(ImageViewerDataItem.init(image: item))
+            result.append(SWImageViewerDataItem.init(image: item))
         }
         return result
     }
 }
-extension ImageViewerDataItem {
-   public static func createDateItemsWithMultimedias(_ multimedias:[MultimediaEntity], defaultImage:UIImage = UIImage()) -> [ImageViewerDataItem]? {
-        var result = [ImageViewerDataItem]()
+extension SWImageViewerDataItem {
+   public static func createDateItemsWithMultimedias(_ multimedias:[SWMultimediaEntity], defaultImage:UIImage = UIImage()) -> [SWImageViewerDataItem]? {
+        var result = [SWImageViewerDataItem]()
         for item in multimedias {
             let image = item.image ?? defaultImage
             var galleryItem = GalleryItem.image(fetchImageBlock: { (imageCompletion) in
@@ -43,7 +43,7 @@ extension ImageViewerDataItem {
                     imageCompletion(image)
                 }, videoURL: url)
             }
-            let dataItem = ImageViewerDataItem.init(image: image, galleryItem: galleryItem)
+            let dataItem = SWImageViewerDataItem.init(image: image, galleryItem: galleryItem)
             result.append(dataItem)
         }
         return result.count == 0 ? nil : result

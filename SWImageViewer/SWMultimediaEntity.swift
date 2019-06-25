@@ -1,5 +1,5 @@
 //
-//  MultimediaEntity.swift
+//  SWMultimediaEntity.swift
 //  SWImageViewer
 //
 //  Created by Supernova SanDick SSD on 2019/6/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 ///多媒体（图片、视频、音频）
-public class MultimediaEntity {
+public class SWMultimediaEntity {
     public var identifier:String? = nil
     public var title:String? = nil
     ///主要内容的url
@@ -33,7 +33,7 @@ public class MultimediaEntity {
         self.init(identifier: identifier, title: title, url: imageUrl, imageUrl: imageUrl, image: image, type: .image)
     }
 }
-extension MultimediaEntity {
+extension SWMultimediaEntity {
     public enum MultimediaType {
         case image
         case video
